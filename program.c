@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
     int jogada = 1, l, c, verif = 0;
@@ -8,11 +9,12 @@ int main(){
             jogo[ind][ind2] = '_';
         }
     }
+    system("cls");
     while(jogada <= 9){
         if(jogada % 2 == 1){
-            printf("Jogador 1 (X): \n\n");
+            printf("\nJogador 1 (X): \n\n");
         }else{
-            printf("Jogador 2 (O): \n\n");
+            printf("\nJogador 2 (O): \n\n");
         }
         do{
             printf("Digite as coordenadas onde deseja inserir o seu simbolo: \n");
@@ -29,7 +31,7 @@ int main(){
         }else{
             jogo[l - 1][c - 1] = 'O';
         }
-        printf("\n\n");
+        system("cls");
         for(int ind = 0; ind < 3; ind++){
             for(int ind2 = 0; ind2 < 3; ind2++){
                 if(ind2 == 2){
